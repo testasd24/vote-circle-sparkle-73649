@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, Zap, BarChart3, Users, CheckCircle2 } from "lucide-react";
-import votingIllustration from "@/assets/voting-illustration.png";
+import VotingAnimation from "@/components/VotingAnimation";
 
 const Index = () => {
   const features = [
@@ -64,16 +64,9 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Right Illustration */}
+          {/* Right Animation */}
           <div className="flex justify-center lg:justify-end animate-fade-in">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 blur-3xl rounded-full"></div>
-              <img 
-                src={votingIllustration} 
-                alt="Ilustración de votación digital" 
-                className="relative w-full max-w-md h-auto drop-shadow-2xl"
-              />
-            </div>
+            <VotingAnimation />
           </div>
         </div>
       </section>

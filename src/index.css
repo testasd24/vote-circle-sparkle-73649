@@ -125,3 +125,37 @@ All colors MUST be HSL.
     box-shadow: var(--shadow-hover);
   }
 }
+
+@keyframes vote-fall {
+  0% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) translateY(80px) rotate(10deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(-50%) translateY(160px) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px);
+    opacity: 0.6;
+  }
+}
+
+.animate-vote-fall {
+  animation: vote-fall 3s ease-in-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
